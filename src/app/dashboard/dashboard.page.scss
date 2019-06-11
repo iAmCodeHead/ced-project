@@ -1,5 +1,6 @@
 ion-content{
     --background: #3880ff;
+    font-family: cursive;
 }
 
 ion-card-subtitle{
@@ -20,4 +21,8 @@ ion-button{
 }
 ion-list{
     --background: #3880ff;
+}
+ion-footer{
+    background: #062f77;
+    color: #fff;
 }

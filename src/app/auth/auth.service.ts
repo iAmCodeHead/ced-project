@@ -12,7 +12,7 @@ import { AuthResponse } from './auth-response';
 })
 export class AuthService {
 
-  AUTH_SERVER_ADDRESS  =  'https://stark-hollows-78813.herokuapp.com/';
+  AUTH_SERVER_ADDRESS  =  'https://boiling-springs-11927.herokuapp.com';
   authSubject  =  new  BehaviorSubject(false);
   loggedIn: boolean;
   userData: any;
