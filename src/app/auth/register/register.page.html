@@ -1,0 +1,62 @@
+<ion-content  color="primary">
+  <form  #form="ngForm" (ngSubmit)="register(form)">
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div text-center>
+            <h3>Create your account!</h3>
+          </div>
+          <div padding>
+            <ion-item>
+              <ion-label position="floating">Full Name</ion-label>
+              <ion-input  name="student_name" type="text" ngModel required></ion-input>
+            </ion-item>
+            <!-- <ion-item>
+                <ion-label position="floating">Full Name</ion-label>
+                <ion-input  name="student_dept" type="text" ngModel required></ion-input>
+              </ion-item> -->
+            <ion-item>
+              <ion-label position="floating">Mobile Number</ion-label>
+              <ion-input name="mobile_no" type="tel" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Select Department</ion-label>
+              <ion-select name="student_dept" ngModel required>
+                <ion-select-option value="CSC">Computer Science</ion-select-option>
+                <ion-select-option value="PHY">Physics</ion-select-option>
+                <ion-select-option value="MTH">Mathematics</ion-select-option>
+                <ion-select-option value="GEO">Geology</ion-select-option>
+                <ion-select-option value="CHM">Chemistry</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">select level</ion-label>
+              <ion-select name="student_level" ngModel required>
+                <ion-select-option value="100L">100</ion-select-option>
+                <ion-select-option value="200L">200</ion-select-option>
+                <ion-select-option value="300L">300</ion-select-option>
+                <ion-select-option value="400L">400</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Password</ion-label>
+              <ion-input name="password" type="password" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Confirm Password</ion-label>
+              <ion-input name="confirm" type="password" ngModel required></ion-input>
+            </ion-item>
+          </div>
+          <div padding>
+            <ion-button  size="large" type="submit" [disabled]="form.invalid" expand="block">Register</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row justify-content-center>
+        <div text-center>
+      Have an account already? <a routerLink='/login'>login here</a>
+        </div>
+    </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
