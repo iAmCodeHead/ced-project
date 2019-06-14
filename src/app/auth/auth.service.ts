@@ -16,6 +16,10 @@ export class AuthService {
   authSubject  =  new  BehaviorSubject(false);
   loggedIn: boolean;
   userData: any;
+  studentName: any;
+  studentDept: any;
+  studentLevel: any;
+  mobileNo: any;
 
   constructor(private  httpClient: HttpClient, private  storage: Storage) { }
 
@@ -53,10 +57,26 @@ export class AuthService {
     );
   }
 
-  profile() {
-    if (this.loggedIn === true) {
-      return this.userData;
-    }
+  async profile() {
+    // this.storage.get('STUDENT_NAME').then((res) => {
+    //   this.studentName = res;
+    // });
+    // this.storage.get('STUDENT_DEPT').then((res) => {
+    //   this.studentDept = res;
+    // });
+    // this.storage.get('STUDENT_LEVEL').then((res) => {
+    //   this.studentLevel = res;
+    // });
+    // this.storage.get('MOBILE_NO').then((res) => {
+    //   this.mobileNo = res;
+    // });
+    // this.userData = {
+    //   name: this.studentName,
+    //   level: this.studentLevel,
+    //   dept: this.studentDept,
+    //   mobile: this.mobileNo
+    // };
+    return await this.userData;
   }
 
   async logout() {

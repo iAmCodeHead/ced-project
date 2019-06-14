@@ -9,10 +9,18 @@ a{
     color: #fff;
 }
 ion-footer{
-    background: #062f77;
-    color: #fff;
+    --background: #062f77;
+    --color: #fff;
 }
 
 ion-content{
     font-family: cursive;
+}
+ion-title{
+    font-family: cursive;
+    align-content: center;
+}
+ion-toolbar{
+    --background: #062f77;
+    --color: #fff;
 }

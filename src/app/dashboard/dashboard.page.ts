@@ -56,6 +56,13 @@ export class DashboardPage implements OnInit {
   }
 
   ngOnInit() {
+    // this.authApi.profile().then((res) => {
+    //   // this.studentName = res.name;
+    //   // this.studentLevel = res.level;
+    //   // this.studentDept = res.dept;
+    //   // this.mobileNo = res.mobile_no;
+    //   console.log(res);
+    // });
     this.storage.get('STUDENT_NAME').then((res) => {
       this.studentName = res;
     });
